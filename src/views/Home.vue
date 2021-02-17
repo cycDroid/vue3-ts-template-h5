@@ -2,11 +2,15 @@
   <div class="home">
     <div class="user-head">
       <div class="user-avatar">
-        <img src="@assets/images/vue3.png" alt="" />
+        <!-- <img src="@assets/images/vue3.png" alt="" /> -->
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=915463672,2216051610&fm=26&gp=0.jpg" alt="" />
+
       </div>
       <div class="user-info">
-        <div class="name">{{ user.name }}</div>
-        <div class="hello">vue3.0 ts h5 with vant</div>
+            <!-- <div class="name">{{ user.name }}</div>-->        
+            <div class="name">大超说媒欢迎你</div>
+            <div class="hello">北京中高端交友俱乐部</div>
+
       </div>
       <div class="message">
         <div class="message-box" @click="toMessage">
@@ -19,6 +23,13 @@
         </div>
       </div>
     </div>
+    <img src="@assets/images/message_bg.gif" alt="" srcset="" />
+<!--     <van-row>
+      <van-col span="8">男生</van-col>
+      <van-col span="8">女生</van-col>
+      <van-col span="8">精英圈</van-col>
+    </van-row> -->
+
     <!-- <div class="divider-line"></div> -->
     <div class="menu">
       <div class="list">
@@ -44,10 +55,12 @@
 import { defineComponent, reactive, toRefs, inject } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
+
 export default defineComponent({
   name: "HOME",
 
   setup() {
+
     const router = useRouter();
     const state = reactive({
       user: {}
@@ -57,30 +70,34 @@ export default defineComponent({
 
     const menus = [
       {
-        title: "WeChat朋友圈 ",
+        title: "茄哥",
         path: "/message",
-        icon: "friends-o",
-        sub: "🌴 Vue3模仿微信朋友圈，点击查看！欢迎留言 "
+        icon: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=915463672,2216051610&fm=26&gp=0.jpg",
+        sub: "北京土著 澳洲留学生活 10 年"
       },
       {
-        title: "Shoping购物车 ",
+        title: "茄哥 ",
         path: "/shop",
-        icon: "cart-o",
-        sub: "🛒 Vue3购物车项目开始启动，尽请期待！ "
+        icon: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=915463672,2216051610&fm=26&gp=0.jpg",
+        sub: "北京土著 澳洲留学生活 10 年"
       },
       {
-        title: "Vuex",
+        title: "茄哥",
         path: "/vuex",
-        icon: "cluster-o",
-        sub:
-          "📦 Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式! <br>点击我查看Vue3.0中Vuex的操作吧"
+        icon: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=915463672,2216051610&fm=26&gp=0.jpg",
+        sub: "北京土著 澳洲留学生活 10 年"
       },
       {
-        title: "Composition Api",
+        title: "茄哥",
         path: "/vuex",
-        icon: "hot-o",
-        sub:
-          "👄 下一个主要版本的Vue中讨论的最常见的就是Composition AP的特色语法的。 这是一种全新的逻辑重用和代码组织方法"
+        icon: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=915463672,2216051610&fm=26&gp=0.jpg",
+        sub: "北京土著 澳洲留学生活 10 年"
+      },
+      {
+        title: "茄哥",
+        path: "/vuex",
+        icon: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=915463672,2216051610&fm=26&gp=0.jpg",
+        sub: "北京土著 澳洲留学生活 10 年"
       }
     ];
     const store = useStore();
